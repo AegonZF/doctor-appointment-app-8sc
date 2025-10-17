@@ -1,3 +1,6 @@
+{{-- Takes the parameters of dashboard --}}
+@props(['breadcrumbs' => []])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -16,7 +19,7 @@
         <script src="https://kit.fontawesome.com/04e39bb3b3.js" crossorigin="anonymous"></script>
 
         <wireui:scripts />
-        
+
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -28,9 +31,10 @@
 
     <div class="p-4 sm:ml-64">
 <!--Añadir margen superior -->
-    <div class="mt-14">
-        {{ $slot }}
+    <div class="mt-14 flex items-center justify-between w-full">
+        @include('layouts.includes.admin.breadcrumb')
     </div>
+    {{ $slot }}
     </div>
 
         @stack('modals')
