@@ -8,30 +8,13 @@
             'active' => request()->routeIs('admin.dashboard'),
         ],
         [
-            'header' => 'Manage Page',
+            'header' => 'Management',
         ],
         [
-            'name' => 'Dashboard2',
-            'icon' => 'fa-solid fa-gauge',
-            'href' => route('admin.dashboard'),
-            'active' => false,
-            'submenu' => [
-                [
-                    'name' => 'Products',
-                    'href' => '#',
-                    'active' => false,
-                ],
-                [
-                    'name' => 'Billing',
-                    'href' => '#',
-                    'active' => false,
-                ],
-                [
-                    'name' => 'Invoice',
-                    'href' => '#',
-                    'active' => false,
-                ],
-            ],
+            'name' => 'Roles and permissions',
+            'icon' => 'fa-solid fa-shield-halved',
+            'href' => route('admin.roles.index'),
+            'active' => request()->routeIs('admin.roles.*'),
         ],
     ];
 @endphp
