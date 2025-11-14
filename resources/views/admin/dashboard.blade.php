@@ -11,5 +11,5 @@
         'name' => 'H8',
 ],
 ]">
-    Hola prueba
+    Users
 </x-admin-layout>

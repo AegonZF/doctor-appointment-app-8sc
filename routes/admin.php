@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
@@ -9,3 +10,5 @@ Route::get('/', function(){
 
 //Roles management
 Route::resource('roles', RoleController::class);
+//Users management
+Route::resource('users', UserController::class);
